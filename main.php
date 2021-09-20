@@ -82,7 +82,7 @@ session_start();
                                         </button>
                                     </div>
                                     <div class="modal-body">
-                                        <form action="./get-data.php" method="post">
+                                        <form action="./create-pdf.php" method="post">
                                         <div id="smartwizard">
                                             <ul>
                                                 <li>
