@@ -2,6 +2,12 @@
 
 require_once "./vendor/autoload.php";
 use Dompdf\Dompdf;
+use Dompdf\Options;
+
+$options = new Options();
+$options->set('defaultFont', 'Courier');
+$options->setIsHtml5ParserEnabled(true);
+$dompdf = new Dompdf($options);
 
 
 $html = file_get_contents("./pdf-data.php");
