@@ -378,7 +378,7 @@ $options->setIsHtml5ParserEnabled(true);
 $dompdf = new Dompdf($options);
 
 
-$html = file_get_contents("./pdf-data.php");
+// $html = file_get_contents("./pdf-data.php");
 
 
 $dompdf = new Dompdf();
