@@ -29,8 +29,29 @@ session_start();
         class="sidebar-mini fixed"
         style="background: linear-gradient(135deg, #172a74, #21a9af); background-color: #172a74;">
         <div class="wrapper">
+ <!-- Navbar-->
+ <header style="background-color:#" class="main-header hidden-print"><a style="background-color:#123b4f;font-family: fantasy;" class="logo" href="#">CVBien</a>
+        <nav style="background-color:#123b4f" class="navbar navbar-static-top">
+          <!-- Sidebar toggle button-->
+          <!-- Navbar Right Menu-->
+          <div class="navbar-custom-menu">
+            <ul class="top-nav">
+              
+              <!-- User Menu-->
+              <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user fa-lg"></i></a>
+                <ul class="dropdown-menu settings-menu">
+                  <li><a href="login.php"><i class="fa fa-sign-out fa-lg"></i>Iniciar Sesión</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+
+
             <div class="header-blue" style="margin-left: 0px;">
-                <div class="row">
+                <div style="margin-top:3em;" class="row">
                     <div class="col-md-12">
                         <!-- Hero-->
                         <div class="container hero ">
@@ -58,7 +79,7 @@ session_start();
                                 <div
                                     class="col-md-5 col-lg-5 offset-lg-1 offset-xl-0 d-none d-lg-block phone-holder">
                                     <div class="iphone-mockup"><img src="assets/hero.png" class="device">
-
+                                    
                                     </div>
                                 </div>
                             </div>
