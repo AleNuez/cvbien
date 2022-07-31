@@ -1,0 +1,100 @@
+.bg-login-new-imagen {
+  background: url("../images/hero.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position-x: 75%;
+}
+.bg-login-imagen {
+    background: url("/images/hero.png");
+    background-position: center;
+    background-size: cover;
+  }
+
+  .bg-register-imagen {
+    background: url("../images/register.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position-x: 75%;
+  }
+  .bg-restore-imagen {
+    background: url("../images/forgot.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position-x: 75%;
+  }
+  .bg-password-imagen {
+    background: url("../images/forgot.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: 75%;
+  }
+
+  .bg-profile-bg {
+    background: url("https://pbs.twimg.com/media/E2dqDjSXoAIX5px.jpg");
+    background-position: center;
+    background-size: cover;
+    /* width: 600px;
+    height: 800px; */
+  }
+
+  .bg-profile-imagen {
+    background: url("https://i.discogs.com/hhglIlqjAr4WxIg4tQkLfHZ0aHrFqWIjVElG_JjQ4fY/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTQ3MDkx/NC0xMjM2ODc2ODU1/LmpwZWc.jpeg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    width: 300px;
+    height: 240px;
+    }
+
+  .bg-micv-imagen{
+      background: url("https://marketplace.canva.com/EAENvqzqoT0/1/0/1600w/canva-corporate-work-linkedin-banner-YjnYKO7wUkE.jpg");
+      background-position: center;
+      background-size: cover;
+      border-radius: 5px;
+      background-position-y: 40%;
+      width: 600px;
+      height: 200px;
+
+  }
+  .bg-hero {
+    background: url("https://timesofindia.indiatimes.com/thumb/msid-69280516,width-1200,height-900,resizemode-4/.jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+    background-position-y: 70%;
+    width: 600px;
+    height: 200px;
+    
+  }
+  .bg-about-hero {
+    background: url("https://www.radiorafaela.com.ar/wp-content/uploads/2021/06/How-to-Improve-Teamwork-and-Collaboration-Skills0A.jpeg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+    background-position-y: 40%;
+    width: 600px;
+    height: 200px;
+    
+  }
+  .bg-portales-hero {
+    background: url(" https://www.zinghr.com/wp-content/uploads/2020/05/Future-of-Workforce-Management-1.jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+    background-position-y: 40%;
+    width: 600px;
+    height: 200px;
+    
+  }
+
+
+  form.user .form-control-user-custom {
+    font-size: 0.8rem;
+    border-radius: 10rem;
+    padding: 0.4rem 1rem;
+  }
+
