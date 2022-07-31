@@ -1,8 +1,13 @@
 <?php
-
-define('DB_SERVER', 'localhost');
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', '');
+// localhost
+// define('DB_SERVER', 'localhost');
+// define('DB_USERNAME', 'root');
+// define('DB_PASSWORD', '');
+// define('DB_NAME', 'cvb');
+// web
+define('DB_SERVER', 'fdb25.awardspace.net');
+define('DB_USERNAME', '3446176_users');
+define('DB_PASSWORD', 'uLQH928ThSy.GnB');
 define('DB_NAME', 'cvb');
  
 $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
