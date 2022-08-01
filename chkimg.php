@@ -120,7 +120,10 @@ if ($link->query($sql) === TRUE) { echo "New record created successfully";} else
 
 
 
-header('Location: micv.php');
+//header('Location: micv.php');
 //header('Location: generate-cv.php');
 
 ?>
+<script>
+window.location.replace("http://alenuez38.atwebpages.com/site/cvbien/micv.php");
+</script>
