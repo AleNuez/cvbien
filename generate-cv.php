@@ -148,7 +148,7 @@ $s4_description_d =$_SESSION['s4_description_d'];
                     <td style="padding-right:20px" align="right">
 
                        
-                    <img width="150px" height="150px" src="http://<?php echo $_SERVER['HTTP_HOST']; ?>/cvbien2/images/<?php echo $s4_photo; ?>" alt="Logo" class="logo"/>
+                    <img width="150px" height="150px" src="http://<?php echo $_SERVER['HTTP_HOST']; ?>/cvbien/images/<?php echo $s4_photo; ?>" alt="Logo" class="logo"/>
                     </td>
 
                 </tr>

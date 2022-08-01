@@ -23,7 +23,7 @@
                                     <div class="h5 mb-0 font-weight-bold text-gray-800">
                                     <form action="create-cv.php" method="post">
                     <div class="col-12">
-                        <input type="submit" class="btn btn-primary  btn-lg btn-block" value=" + | Crear Curriculum"></div>
+                        <input type="submit" class="btn btn-primary btn-lg btn-block" value=" + | Crear Curriculum" <?php echo $_SESSION['generated'] ?  "disabled" : ""; ?> ></div>
                 </form>
                                     </div>
                                 </div>
