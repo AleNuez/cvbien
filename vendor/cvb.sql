@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 31-07-2022 a las 03:37:03
+-- Tiempo de generación: 01-08-2022 a las 19:44:29
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -173,28 +173,10 @@ ALTER TABLE `roles`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `s1`
---
-ALTER TABLE `s1`
-  ADD PRIMARY KEY (`s1_id`);
-
---
 -- Indices de la tabla `s2`
 --
 ALTER TABLE `s2`
   ADD PRIMARY KEY (`s2_id`);
-
---
--- Indices de la tabla `s3`
---
-ALTER TABLE `s3`
-  ADD PRIMARY KEY (`s3_id`);
-
---
--- Indices de la tabla `s4`
---
-ALTER TABLE `s4`
-  ADD PRIMARY KEY (`s4_id`);
 
 --
 -- Indices de la tabla `users`
@@ -205,30 +187,6 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
-
---
--- AUTO_INCREMENT de la tabla `s1`
---
-ALTER TABLE `s1`
-  MODIFY `s1_id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `s2`
---
-ALTER TABLE `s2`
-  MODIFY `s2_id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `s3`
---
-ALTER TABLE `s3`
-  MODIFY `s3_id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `s4`
---
-ALTER TABLE `s4`
-  MODIFY `s4_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
