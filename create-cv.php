@@ -105,7 +105,7 @@ location.replace("artists.php");
                             <h5 class="mb-0">
                                 <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
                                     aria-expanded="true" aria-controls="collapseOne">
-                                    Acerca de mi...
+                                    1- Acerca de mi...
                                 </button>
                             </h5>
                         </div>
@@ -113,7 +113,7 @@ location.replace("artists.php");
                         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
                             data-parent="#accordion">
                             <div class="card-body">
-                                <h3 class="">1 - Información de contacto</h3>
+                                <h3 class="">Información de contacto</h3>
                                 <small>Agregue sus datos para que pueda ser contactado.</small>
                                 <div
                                     class="form-group row mt-2 <?php echo (!empty($album_nombre_err)) ? 'has-error' : ''; ?>">
@@ -155,13 +155,13 @@ location.replace("artists.php");
                             <h5 class="mb-0">
                                 <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
                                     aria-expanded="false" aria-controls="collapseTwo">
-                                    Estudios Formales
+                                    2 - Estudios Formales
                                 </button>
                             </h5>
                         </div>
                         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                             <div class="card-body">
-                                <h3 class="card-title">2- Información acádemica</h3>
+                                <h3 class="card-title">Información acádemica</h3>
                                 <small>Ingrese hasta 3 (Tres) estudios, los más relevantes. El más actual
                                     primero.</small><br>
                                 <!-- Estudios #1 -->

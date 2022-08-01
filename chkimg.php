@@ -105,55 +105,6 @@ $_SESSION['s4_name_d'] = isset($_POST['s4-name-d']) ? $_POST['s4-name-d'] : "Cur
 $_SESSION['s4_place_d'] = isset($_POST['s4-place-d']) ? $_POST['s4-place-d'] : "Lugar";
 $_SESSION['s4_description_d'] = isset($_POST['s4-description-d']) ? $_POST['s4-description-d'] : "Curso de Ejemplo";
 
-//Checkeo si ya se creo cv
-  // Prepare a select statement
-  $sql = "SELECT * FROM s1 where s1_id = '{$_SESSION['id']}'";
-  if($stmt = mysqli_prepare($link, $sql)){
-
-// Attempt to execute the prepared statement
-if(mysqli_stmt_execute($stmt)){
- /* store result */
- mysqli_stmt_store_result($stmt);
- 
- if(mysqli_stmt_num_rows($stmt) > 0){
-     $msj = ". Tu CV ya está listo para ver o descargar!";
-     $ok = true;
- } else{
-     $msj = ". Todavia no has creado tu CV, andá a Inicio y completá el formulario para poder descargar tu curriculum.";
-     $ok = false;
- }
-} else{
- echo "Al parecer algo salió mal.";
-}
-}
-
-if($ok){
-// Borro s1
-$sql = "DELETE FROM s1 WHERE id = '{$_SESSION['id']}'";
-if ($link->query($sql) === TRUE) { echo "Old record deleted successfully";} else {echo "Error S1: " . $sql . "<br>" . $link->error;}
-// Añado datos de sección 1 a BD tabla 1
-$sql = "INSERT INTO s1 (s1_name, s1_email, s1_phone, s1_city, s4_photo) VALUES ('{$_SESSION['s1_name']}','{$_SESSION['s1_email']}','{$_SESSION['s1_phone']}','{$_SESSION['s1_city']}','{$_SESSION['s4_photo']}')";
-if ($link->query($sql) === TRUE) { echo "New record created successfully";} else {echo "Error S1: " . $sql . "<br>" . $link->error;}
-// Borro s2
-$sql = "DELETE FROM s2 WHERE id = '{$_SESSION['id']}'";
-if ($link->query($sql) === TRUE) { echo "Old record deleted successfully";} else {echo "Error S1: " . $sql . "<br>" . $link->error;}
-// Añado datos s2
-$sql = "INSERT INTO s2 (estudio1_display, s2_year, s2_year_end, s2_title, s2_place, s2_studytype, s2_description, estudio2_display, s2_year_b, s2_year_end_b, s2_title_b, s2_place_b, s2_studytype_b, s2_description_b, estudio3_display, s2_year_c, s2_year_end_c, s2_title_c, s2_place_c, s2_studytype_c, s2_description_c) VALUES ('{$_SESSION['estudio1_display']}', '{$_SESSION['s2_year']}', '{$_SESSION['s2_year_end']}', '{$_SESSION['s2_title']}', '{$_SESSION['s2_place']}', '{$_SESSION['s2_studytype']}', '{$_SESSION['s2_description']}', '{$_SESSION['estudio2_display']}', '{$_SESSION['s2_year_b']}', '{$_SESSION['s2_year_end_b']}', '{$_SESSION['s2_title_b']}', '{$_SESSION['s2_place_b']}', '{$_SESSION['s2_studytype_b']}', '{$_SESSION['s2_description_b']}', '{$_SESSION['estudio3_display']}', '{$_SESSION['s2_year_c']}', '{$_SESSION['s2_year_end_c']}', '{$_SESSION['s2_title_c']}', '{$_SESSION['s2_place_c']}', '{$_SESSION['s2_studytype_c']}', '{$_SESSION['s2_description_c']}')";
-if ($link->query($sql) === TRUE) { echo "New record created successfully";} else {echo "Error S2: " . $sql . "<br>" . $link->error;}
-// Borro s3
-$sql = "DELETE FROM s3 WHERE id = '{$_SESSION['id']}'";
-if ($link->query($sql) === TRUE) { echo "Old record deleted successfully";} else {echo "Error S1: " . $sql . "<br>" . $link->error;}
-// Añado datos s3
-$sql = "INSERT INTO s3 (trabajo1_display, s3_year_a, s3_year_end_a, s3_position_a, s3_place_a, s3_tasks_a, trabajo2_display, s3_year_b, s3_year_end_b, s3_position_b, s3_place_b, s3_tasks_b, trabajo3_display, s3_year_c, s3_year_end_c, s3_position_c, s3_place_c, s3_tasks_c) VALUES ('{$_SESSION['trabajo1_display']}', '{$_SESSION['s3_year_a']}', '{$_SESSION['s3_year_end_a']}', '{$_SESSION['s3_position_a']}', '{$_SESSION['s3_place_a']}', '{$_SESSION['s3_tasks_a']}', '{$_SESSION['trabajo2_display']}', '{$_SESSION['s3_year_b']}', '{$_SESSION['s3_year_end_b']}', '{$_SESSION['s3_position_b']}', '{$_SESSION['s3_place_b']}', '{$_SESSION['s3_tasks_b']}', '{$_SESSION['trabajo3_display']}', '{$_SESSION['s3_year_c']}', '{$_SESSION['s3_year_end_c']}', '{$_SESSION['s3_position_c']}', '{$_SESSION['s3_place_c']}', '{$_SESSION['s3_tasks_c']}')";
-if ($link->query($sql) === TRUE) { echo "New record created successfully";} else {echo "Error S3: " . $sql . "<br>" . $link->error;}
-// Borro s4
-$sql = "DELETE FROM s4 WHERE id = '{$_SESSION['id']}'";
-if ($link->query($sql) === TRUE) { echo "Old record deleted successfully";} else {echo "Error S1: " . $sql . "<br>" . $link->error;}
-// Añado datos s4
-$sql = "INSERT INTO s4 (curso1_display, s4_time, s4_name, s4_place, s4_description, curso2_display, s4_time_b, s4_name_b, s4_place_b, s4_description_b, curso3_display, s4_time_c, s4_name_c, s4_place_c, s4_description_c, curso4_display, s4_time_d, s4_name_d, s4_place_d, s4_description_d) VALUES ('{$_SESSION['curso1_display']}', '{$_SESSION['s4_time']}', '{$_SESSION['s4_name']}', '{$_SESSION['s4_place']}', '{$_SESSION['s4_description']}', '{$_SESSION['curso2_display']}', '{$_SESSION['s4_time_b']}', '{$_SESSION['s4_name_b']}', '{$_SESSION['s4_place_b']}', '{$_SESSION['s4_description_b']}', '{$_SESSION['curso3_display']}', '{$_SESSION['s4_time_c']}', '{$_SESSION['s4_name_c']}', '{$_SESSION['s4_place_c']}', '{$_SESSION['s4_description_c']}', '{$_SESSION['curso4_display']}', '{$_SESSION['s4_time_d']}', '{$_SESSION['s4_name_d']}', '{$_SESSION['s4_place_d']}', '{$_SESSION['s4_description_d']}')";
-if ($link->query($sql) === TRUE) { echo "New record created successfully";} else {echo "Error S4: " . $sql . "<br>" . $link->error;}
-
-} else {
 // Añado datos de sección 1 a BD tabla 1
 $sql = "INSERT INTO s1 (s1_id, s1_name, s1_email, s1_phone, s1_city, s4_photo) VALUES ('{$_SESSION['id']}','{$_SESSION['s1_name']}','{$_SESSION['s1_email']}','{$_SESSION['s1_phone']}','{$_SESSION['s1_city']}','{$_SESSION['s4_photo']}')";
 if ($link->query($sql) === TRUE) { echo "New record created successfully";} else {echo "Error S1: " . $sql . "<br>" . $link->error;}
@@ -167,16 +118,7 @@ if ($link->query($sql) === TRUE) { echo "New record created successfully";} else
 $sql = "INSERT INTO s4 (s4_id, curso1_display, s4_time, s4_name, s4_place, s4_description, curso2_display, s4_time_b, s4_name_b, s4_place_b, s4_description_b, curso3_display, s4_time_c, s4_name_c, s4_place_c, s4_description_c, curso4_display, s4_time_d, s4_name_d, s4_place_d, s4_description_d) VALUES ('{$_SESSION['id']}','{$_SESSION['curso1_display']}', '{$_SESSION['s4_time']}', '{$_SESSION['s4_name']}', '{$_SESSION['s4_place']}', '{$_SESSION['s4_description']}', '{$_SESSION['curso2_display']}', '{$_SESSION['s4_time_b']}', '{$_SESSION['s4_name_b']}', '{$_SESSION['s4_place_b']}', '{$_SESSION['s4_description_b']}', '{$_SESSION['curso3_display']}', '{$_SESSION['s4_time_c']}', '{$_SESSION['s4_name_c']}', '{$_SESSION['s4_place_c']}', '{$_SESSION['s4_description_c']}', '{$_SESSION['curso4_display']}', '{$_SESSION['s4_time_d']}', '{$_SESSION['s4_name_d']}', '{$_SESSION['s4_place_d']}', '{$_SESSION['s4_description_d']}')";
 if ($link->query($sql) === TRUE) { echo "New record created successfully";} else {echo "Error S4: " . $sql . "<br>" . $link->error;}
 
-<<<<<<< HEAD
-}
-
-
-
-//header('Location: micv.php');
-=======
 $_SESSION['generated'] = TRUE;
 header('Location: micv.php');
->>>>>>> 6cd6a8cd60dbe0269f5c77704ee5184aa395ef26
 //header('Location: generate-cv.php');
-
 ?>

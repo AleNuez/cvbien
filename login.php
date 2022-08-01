@@ -67,6 +67,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["username"] = $username;
                             $_SESSION["name"] = $name;      
                             $_SESSION["lastname"] = $last_name;    
+                            $_SESSION['generated'] = FALSE;
 
                             
                             // Redirect user to welcome page
