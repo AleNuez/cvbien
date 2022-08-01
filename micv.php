@@ -85,9 +85,10 @@
                 ?>   
                 
             <div class="row mt-3">
-                            <div class="col-6"><a target="_blank" href="redirect-see.php" class="btn btn-primary btn-lg btn-block">Ver CV</a></div>
-                            <div class="col-6"><a href="redirect-download.php" class="btn btn-primary btn-lg btn-block">Descargar CV</a></div>
-            </div>
+                            <div class="col-4"><a target="_blank" href="redirect-see.php" class="btn btn-primary btn-lg btn-block">Ver CV</a></div>
+                            <div class="col-4"><a href="redirect-download.php" class="btn btn-primary btn-lg btn-block">Descargar CV</a></div>
+                            <div class="col-4"><a href="delete-cv.php" class="btn btn-danger btn-lg btn-block">Borrar CV</a></div>
+                        </div>
             <?php 
             }    
                 ?> 
